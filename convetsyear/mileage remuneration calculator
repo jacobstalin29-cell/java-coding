@@ -1,0 +1,26 @@
+5 question 
+import java.util.Scanner;
+
+public class MileageCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input: beginning and ending odometer readings
+        double start = sc.nextDouble();
+        double end = sc.nextDouble();
+
+        // Calculate distance
+        double distance = end - start;
+
+        // Rate per mile
+        double rate = 25.0;
+
+        // Calculate remuneration
+        double remuneration = distance * rate;
+
+        // Output formatted to two decimal places
+        System.out.printf("%.2f %.2f%n", distance, remuneration);
+
+        sc.close();
+    }
+}
