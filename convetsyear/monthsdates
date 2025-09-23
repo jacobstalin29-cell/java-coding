@@ -1,0 +1,25 @@
+4 question 
+import java.util.Scanner;
+
+public class DaysToYearsMonthsDays {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input
+        int totalDays = sc.nextInt();
+
+        // Convert
+        int years = totalDays / 365;
+        totalDays = totalDays % 365;
+
+        int months = totalDays / 30;
+        int days = totalDays % 30;
+
+        // Output
+        System.out.println("Years: " + years);
+        System.out.println("Months: " + months);
+        System.out.println("Days: " + days);
+
+        sc.close();
+    }
+}
