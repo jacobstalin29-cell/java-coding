@@ -1,0 +1,22 @@
+14 question 
+import java.util.Scanner;
+
+public class EvenNumbersInRange {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+
+        // Print even numbers
+        for (int i = start; i <= end; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i);
+                if (i < end - 1) System.out.print(" "); // spacing
+            }
+        }
+
+        sc.close();
+    }
+}
