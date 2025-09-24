@@ -1,0 +1,27 @@
+10 question 
+import java.util.Scanner;
+
+public class SBICreditCardEligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Inputs
+        int primaryAge = sc.nextInt();
+        int addonAge = sc.nextInt();
+        int empType = sc.nextInt();   // 1=Salaried, 2=Self-employed, 3=Student, 4=Retired pensioner
+        int income = sc.nextInt();
+
+        // Eligibility check
+        if (primaryAge >= 21 && primaryAge <= 60 &&
+            addonAge >= 18 &&
+            (empType >= 1 && empType <= 4) &&
+            income <= 300000) {
+
+            System.out.println("Yes. You are eligible for SBI credit cards");
+        } else {
+            System.out.println("No. You are not eligible for SBI credit cards");
+        }
+
+        sc.close();
+    }
+}
