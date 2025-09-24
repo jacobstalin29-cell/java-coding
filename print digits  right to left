@@ -1,0 +1,28 @@
+18 question 
+import java.util.Scanner;
+
+public class PrintDigitsRightToLeft {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input
+        int n = sc.nextInt();
+
+        // Handle negative numbers (optional)
+        if (n < 0) {
+            n = -n;
+        }
+
+        // Print digits from right to left
+        while (n > 0) {
+            int digit = n % 10;
+            System.out.print(digit);
+            n /= 10;
+            if (n > 0) {
+                System.out.print(" ");
+            }
+        }
+
+        sc.close();
+    }
+}
