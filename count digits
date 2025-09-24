@@ -1,0 +1,28 @@
+20 question 
+import java.util.Scanner;
+
+public class CountDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input
+        int n = sc.nextInt();
+
+        // Handle negative numbers
+        n = Math.abs(n);
+
+        // Special case: if number is 0
+        if (n == 0) {
+            System.out.println(1);
+        } else {
+            int count = 0;
+            while (n > 0) {
+                n /= 10;
+                count++;
+            }
+            System.out.println(count);
+        }
+
+        sc.close();
+    }
+}
